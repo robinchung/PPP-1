@@ -1,0 +1,256 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\UpComputer.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\UpComputer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 UpComputer"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "UpComputer 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_UPCOMPUTER_DIALOG DIALOGEX 0, 0, 741, 474
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PaperPlane"
+MENU IDR_SETMENU
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,5,0,727,459
+    CONTROL         "",IDC_TURN,"Static",SS_BLACKFRAME,156,18,138,126
+    CONTROL         "",IDC_PRESSURE,"Static",SS_BLACKFRAME,12,18,138,126
+    CONTROL         "",IDC_GAS,"Static",SS_BLACKFRAME,444,18,138,126
+    CONTROL         "",IDC_OIL,"Static",SS_BLACKFRAME,300,18,138,126
+    CONTROL         "",IDC_TEMPERATURE,"Static",SS_BLACKFRAME,588,18,138,126
+    CTEXT           "",IDC_PLOT,336,162,318,153
+    PUSHBUTTON      "Start",IDC_START,674,219,54,18
+    PUSHBUTTON      "Stop",IDC_STOP,674,241,54,18
+    CONTROL         "Line1",IDC_DISP_LINE1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,674,180,52,12
+    CONTROL         "Line2",IDC_DISP_LINE2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,674,198,52,12
+    GROUPBOX        "控制台",IDC_CTLCONSOLE,12,316,714,135
+    GROUPBOX        "串口设置",IDC_PORTSET,330,329,390,71
+    GROUPBOX        "模式设置",IDC_MODESET,330,406,282,37
+    PUSHBUTTON      "OpenPort",IDC_BTNOPENPORT,618,410,96,33,BS_MULTILINE
+    CONTROL         "模式1",IDC_MODE1,"Button",BS_AUTORADIOBUTTON,348,419,72,18
+    CONTROL         "模式2",IDC_MODE2,"Button",BS_AUTORADIOBUTTON,434,419,72,18
+    CONTROL         "模式3",IDC_MODE3,"Button",BS_AUTORADIOBUTTON,525,419,72,18
+    COMBOBOX        IDC_CBXCOM,341,369,60,42,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CBXBAUD,411,369,60,18,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CBXCHECK,481,369,60,18,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CBXDATA,551,369,60,26,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDITSENDDATA,24,330,240,24,ES_AUTOHSCROLL
+    PUSHBUTTON      "发送数据",IDC_BTNSEND,270,329,54,27
+    PUSHBUTTON      "清除",IDC_BTNCLEAN,618,370,96,27
+    GROUPBOX        "飞行姿态",IDC_GESTURESTATIC,12,156,312,158
+    CONTROL         "",IDC_POWER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,378,347,336,22
+    CTEXT           "油门控制",IDC_YOUMEN,341,347,36,18,SS_CENTERIMAGE
+    GROUPBOX        "接收数据",IDC_RECEIVESTATIC,18,359,306,84
+    EDITTEXT        IDC_EDITRECEIVEDATA,24,371,240,66,ES_AUTOHSCROLL
+    CONTROL         "",IDC_FLY,"Static",SS_BLACKFRAME,18,168,301,138
+END
+
+IDD_DIALOGCAPTURE DIALOGEX 0, 0, 317, 60
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "截屏"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "截屏成功，保存在D://PaperPlane.jpg",IDC_CAPTURESUC,81,24,126,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "UpComputer.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "UpComputer.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_UPCOMPUTER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 734
+        BOTTOMMARGIN, 462
+    END
+
+    IDD_DIALOGCAPTURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SETMENU MENU 
+BEGIN
+    POPUP "视图"
+    BEGIN
+        MENUITEM "截屏",                          ID_32783
+    END
+    MENUITEM "关于",                          0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 UpComputer(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\UpComputer.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
